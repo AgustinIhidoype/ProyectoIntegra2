@@ -15,6 +15,9 @@ app.use ("/home" , rutaHome);
 let rutaAgregarPost = require ("./routes/agregarPost")
 app.use ("/agregarpost", rutaAgregarPost)
 
+let rutaDetalle = require ("./routes/detalle")
+app.use ("/detalle", rutaDetalle)
+
 //TERMINA RUTAS CREADAS X NOSOTROS
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
