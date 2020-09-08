@@ -1,6 +1,6 @@
 let homeController = {
 hola: function (req, res) {
-    res.send ("hola")
+    res.render("home", )
 }
 }
 
