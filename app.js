@@ -8,10 +8,14 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
-
+// RUTAS CREADAS X NOSOTROS
 let rutaHome = require ("./routes/home");
 app.use ("/home" , rutaHome);
 
+let rutaAgregarPost = require ("./routes/agregarPost")
+app.use ("/agregarpost", rutaAgregarPost)
+
+//TERMINA RUTAS CREADAS X NOSOTROS
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
