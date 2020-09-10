@@ -24,6 +24,9 @@ app.use ("/login", rutaLogin)
 let rutaMiPerfil = require ("./routes/miPerfil")
 app.use ("/miPerfil", rutaMiPerfil)
 
+let rutaRegistracion = require ("./routes/registracion")
+app.use ("/registracion", rutaRegistracion)
+
 //TERMINA RUTAS CREADAS X NOSOTROS
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
