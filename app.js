@@ -20,6 +20,9 @@ app.use ("/agregarpost", rutaAgregarPost)
 let rutaDetalle = require ("./routes/detalle")
 app.use ("/detalle", rutaDetalle)
 
+let rutaLogin = require ("./routes/login")
+app.use ("/login", rutaLogin)
+
 //TERMINA RUTAS CREADAS X NOSOTROS
 
 
