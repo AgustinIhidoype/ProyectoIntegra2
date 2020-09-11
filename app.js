@@ -23,6 +23,12 @@ app.use ("/detalle", rutaDetalle)
 let rutaLogin = require ("./routes/login")
 app.use ("/login", rutaLogin)
 
+let rutaMiPerfil = require ("./routes/miPerfil")
+app.use ("/miPerfil", rutaMiPerfil)
+
+let rutaRegistracion = require ("./routes/registracion")
+app.use ("/registracion", rutaRegistracion)
+
 //TERMINA RUTAS CREADAS X NOSOTROS
 
 
