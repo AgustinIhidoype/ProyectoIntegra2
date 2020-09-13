@@ -23,11 +23,10 @@ header nav ul li a:hover{
 }
 .logo{
     margin: 0px;
-    font-family: 'Oleo Script', cursive;
 
 }
 .logo a{
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Oleo Script', cursive;
     color: white;
 }
 .logo a:hover {
