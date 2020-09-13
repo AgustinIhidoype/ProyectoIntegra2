@@ -1,9 +1,10 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap");
 /* FONTS */
 
-
 header{
+
     height: 55px;
     padding-top: 10px;
 }
@@ -22,6 +23,8 @@ header nav ul li a:hover{
 }
 .logo{
     margin: 0px;
+    font-family: 'Oleo Script', cursive;
+
 }
 .logo a{
     font-family: 'Fjalla One', sans-serif;
