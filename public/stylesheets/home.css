@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet');
+
 
 article.post{
     border: 1px solid lightgray;
@@ -17,6 +19,8 @@ article.post div.info-usuario img{
 }
 article.post div.info-usuario h4{
    margin: 8px 10px;
+   font-size: 25px;
+   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 article.post div.post-body{
@@ -36,9 +40,13 @@ article.post div.post-reacciones div.post-pie{
 }
 article.post div.post-reacciones div.post-pie h5{
     margin: 0;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
 }
 article.post div.post-reacciones div.post-pie p{
     margin: 0;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
 }
 article.post div.post-comentarios {
     margin-top: 10px;
@@ -49,7 +57,9 @@ article.post div.post-comentarios h6{
 }
 article.post div.post-comentarios ul{
     list-style: none;
-    margin-top: 5px
+    margin-top: 5px;
+    font-size: 25px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 article.post div.post-comentarios ul li{
     display: flex;

@@ -1,6 +1,9 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet');
+
 /* FONTS */
 
 header{
@@ -16,6 +19,8 @@ header section nav{
 }
 header nav ul li a{
     color: white;
+    font-family: 'Ranchers', cursive;
+
 }
 header nav ul li a:hover{
     color: lightsteelblue;
@@ -26,8 +31,10 @@ header nav ul li a:hover{
 
 }
 .logo a{
+    
     font-family: 'Oleo Script', cursive;
     color: white;
+    font-size: 30px;
 }
 .logo a:hover {
     text-decoration: none;
@@ -48,3 +55,8 @@ header div.uk-navbar-center ul li:nth-last-child(1){
 header nav form input, header nav form ::placeholder, header nav form span{
     color: white !important;
 }
+.uk-navbar-right{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+}
+
