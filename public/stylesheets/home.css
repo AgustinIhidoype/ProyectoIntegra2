@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet');
 
 
+.fotoPost{
+    object-fit: cover;
+    width: 500px;
+    height: 600px; 
+    border-radius: 15px;
+}
+.fotoPerfil{
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+}
 article.post{
     border: 1px solid lightgray;
     border-radius: 10px;
