@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet');
+
+.logeate{
+    font-family: 'Ranchers', cursive;
+    text-align: center;
+    color: white;
+}
+
+.form-group{
+    text-align: center;
+}
+
+.button{
+ text-align: center;
+
+}

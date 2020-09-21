@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet');
+
+
+
+.form-group{
+    text-align: center;
+    
+}
+.tituloregistro{
+    font-family: 'Ranchers', cursive;;
+    color: white;
+    text-align: center;
+}
+.button{
+    text-align: center;
+}
+.nacionalidad{
+    margin-top: 20px;
+}
