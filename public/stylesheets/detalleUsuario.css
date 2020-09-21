@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet');
+
+
 .info-usuario .foto-perfil{
     border-radius: 50%;
 }
@@ -15,4 +18,11 @@
 .muro .link-detalle{
     color: gray;
     text-decoration: none;
+    
+}
+.uk-margin-remove{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+.uk-text-center{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
