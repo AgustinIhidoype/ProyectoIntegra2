@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet');
 
 
+.perfilPluzito{
+    color: black;
+    text-decoration: none;
+
+}
+
+.uk-link-toggle:focus .uk-link, .uk-link-toggle:hover .uk-link, .uk-link:hover, a:hover {
+    color: black;
+    text-decoration: none;
+
+}
+
 .fotoPost{
     object-fit: cover;
     width: 500px;
