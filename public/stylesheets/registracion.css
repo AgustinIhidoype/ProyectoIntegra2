@@ -4,7 +4,7 @@
 
 .form-group{
     text-align: center;
-    
+
 }
 .tituloregistro{
     font-family: 'Ranchers', cursive;;
@@ -16,4 +16,10 @@
 }
 .nacionalidad{
     margin-top: 20px;
+}
+
+input {
+    width: 400px;
+    border-radius: 14px;
+    margin-top: 3%;
 }
