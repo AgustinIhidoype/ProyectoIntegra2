@@ -4,7 +4,7 @@
 
 .form-group{
     text-align: center;
-    
+
 }
 .tituloregistro{
     font-family: 'Ranchers', cursive;;
@@ -19,4 +19,10 @@
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 20px;
     color: white;
+}
+
+input {
+    width: 400px;
+    border-radius: 14px;
+    margin-top: 3%;
 }
