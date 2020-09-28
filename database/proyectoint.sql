@@ -84,8 +84,10 @@ DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `id` int(12) NOT NULL,
   `nombre_usuario` varchar(45) DEFAULT NULL,
-  `fecha_registracion` datetime NOT NULL,
-  `edad` tinyint(4) DEFAULT NULL,
+  `fecha_registracion` datetime DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `constrasenia` varchar(45) DEFAULT NULL,
+  `fecha nacimiento` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -96,9 +98,13 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Pluzito','2019-12-04 00:00:00',32),(2,'Bob Esponja','2015-07-24 00:00:00',22),(3,'Goku','2014-09-11 00:00:00',23),(4,'Morty','2015-02-27 00:00:00',31),(5,'Rick','2016-01-02 00:00:00',28);
+INSERT INTO `usuarios` VALUES (0,'BoJack','2015-05-23 00:00:00','bojack@gmail.com','paredes','1996-02-28 00:00:00'),(1,'Pluzito','2019-12-04 00:00:00','pluzito@gmail.com','siluetas','1990-04-05 00:00:00'),(2,'Bob Esponja','2015-07-24 00:00:00','bob@gmail.com','esponjamojada','1978-07-06 00:00:00'),(3,'Goku','2014-09-11 00:00:00','goku@gmail.com','fuego123','1823-11-13 00:00:00'),(4,'Morty','2015-02-27 00:00:00','morty@gmail.com','yugoslavia','1998-12-12 00:00:00'),(5,'Rick','2016-01-02 00:00:00','rick@gmail.com','palangana130','1995-01-01 00:00:00');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping events for database 'proyectoint'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -109,4 +115,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-09-21 11:01:40
+-- Dump completed on 2020-09-28  9:29:48
