@@ -20,3 +20,9 @@ input{
     width: 400px;
     border-radius: 14px;
 }
+.yatenes{
+    color: white;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}

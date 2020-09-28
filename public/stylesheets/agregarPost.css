@@ -13,3 +13,7 @@
 button{
     margin-top: 15px;
 }
+input{
+    width: 400px;
+    border-radius: 14px;
+}

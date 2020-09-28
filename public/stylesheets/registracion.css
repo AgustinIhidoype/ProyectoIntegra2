@@ -26,3 +26,9 @@ input {
     border-radius: 14px;
     margin-top: 3%;
 }
+.yatenes{
+    color: white;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
