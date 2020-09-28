@@ -1,5 +1,5 @@
 let loginController = {
-    chau: function (req, res) {
+    login: function (req, res) {
         res.render("login", )
     }
     }

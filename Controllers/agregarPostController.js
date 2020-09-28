@@ -1,6 +1,6 @@
 let agregarPostController={
     
-hola: function(req,res){
+agregarPost: function(req,res){
 
     res.render ("agregarPost", )
 }

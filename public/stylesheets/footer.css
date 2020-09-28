@@ -3,6 +3,8 @@ footer{
     height: 40px;
     color: white;
     padding: 0 10px;
+    position: sticky;
+    bottom: 0;
 }
 
 footer ul{
