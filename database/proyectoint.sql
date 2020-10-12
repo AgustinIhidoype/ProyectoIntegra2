@@ -87,7 +87,7 @@ CREATE TABLE `usuarios` (
   `fecha_registracion` datetime DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
   `constrasenia` varchar(45) DEFAULT NULL,
-  `fecha nacimiento` datetime DEFAULT NULL,
+  `fecha_nacimiento` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -115,4 +115,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-09-28  9:29:48
+-- Dump completed on 2020-10-12 11:58:16
