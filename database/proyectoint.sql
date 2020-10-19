@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `proyectoint` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `proyectoint`;
 -- MariaDB dump 10.17  Distrib 10.4.14-MariaDB, for Win64 (AMD64)
 --
 -- Host: 127.0.0.1    Database: proyectoint
@@ -82,14 +84,17 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuarios` (
-  `id` int(12) NOT NULL,
+  `id` int(12) NOT NULL AUTO_INCREMENT,
   `nombre_usuario` varchar(45) DEFAULT NULL,
-  `fecha_registracion` datetime DEFAULT NULL,
+  `fecha_registracion` timestamp NULL DEFAULT current_timestamp(),
   `email` varchar(45) DEFAULT NULL,
   `constrasenia` varchar(45) DEFAULT NULL,
   `fecha_nacimiento` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `preguntaElegida` int(11) DEFAULT NULL,
+  `preguntaRespuesta` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -98,7 +103,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (0,'BoJack','2015-05-23 00:00:00','bojack@gmail.com','paredes','1996-02-28 00:00:00'),(1,'Pluzito','2019-12-04 00:00:00','pluzito@gmail.com','siluetas','1990-04-05 00:00:00'),(2,'Bob Esponja','2015-07-24 00:00:00','bob@gmail.com','esponjamojada','1978-07-06 00:00:00'),(3,'Goku','2014-09-11 00:00:00','goku@gmail.com','fuego123','1823-11-13 00:00:00'),(4,'Morty','2015-02-27 00:00:00','morty@gmail.com','yugoslavia','1998-12-12 00:00:00'),(5,'Rick','2016-01-02 00:00:00','rick@gmail.com','palangana130','1995-01-01 00:00:00');
+INSERT INTO `usuarios` VALUES (1,'BoJack','2015-05-23 00:00:00','bojack@gmail.com','paredes','1996-02-28 00:00:00',NULL,NULL),(2,'Pluzito','2019-12-04 00:00:00','pluzito@gmail.com','siluetas','1990-04-05 00:00:00',NULL,NULL),(3,'Bob Esponja','2015-07-24 00:00:00','bob@gmail.com','esponjamojada','1978-07-06 00:00:00',NULL,NULL),(4,'Goku','2014-09-11 00:00:00','goku@gmail.com','fuego123','1823-11-13 00:00:00',NULL,NULL),(5,'Morty','2015-02-27 00:00:00','morty@gmail.com','yugoslavia','1998-12-12 00:00:00',NULL,NULL),(6,'Rick','2016-01-02 00:00:00','rick@gmail.com','palangana130','1995-01-01 00:00:00',NULL,NULL),(7,'Juan','2020-10-19 16:50:06','juan@gmail.com','juan','1990-05-05 00:00:00',NULL,NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -115,4 +120,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-12 11:58:16
+-- Dump completed on 2020-10-19 14:12:23

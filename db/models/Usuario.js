@@ -25,6 +25,12 @@ module.exports = (sequelize, DataTypes) => {
         },
         fecha_nacimiento: {
             type: DataTypes.DATE
+        },
+        preguntaElegida: {
+            type: DataTypes.INTEGER
+        },
+        preguntaRespuesta: {
+            type: DataTypes.STRING
         }
     }
 
