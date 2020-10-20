@@ -3,6 +3,7 @@ let op = db.Sequelize.Op;
 
 let homeController = {
     index: function (req, res) {
+        db.Post.findAll()
         res.render("home", )
     },
     prueba: function(req, res) {
