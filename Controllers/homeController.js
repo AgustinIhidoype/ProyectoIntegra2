@@ -2,9 +2,15 @@ let db = require("../db/models/index");
 let op = db.Sequelize.Op;
 
 let homeController = {
-    index: function (req, res) {
+    posteos: function (req, res) {
         db.Post.findAll()
-        res.render("home", )
+        .then(function(posteos){
+            res.render('home', {posteos: posteos})
+        })
+        db.Usuario.findAll()
+        .then(function(usuarios){
+            res.render('home', {usuarios: usuarios})
+        })
     },
     prueba: function(req, res) {
         db.Usuario.findAll()

@@ -31,6 +31,9 @@ module.exports = (sequelize, DataTypes) => {
         },
         preguntaRespuesta: {
             type: DataTypes.STRING
+        },
+        fotoPerfil: {
+            type: DataTypes.STRING
         }
     }
 

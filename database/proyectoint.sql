@@ -31,8 +31,6 @@ CREATE TABLE `comentarios` (
   `comentario` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `id_usuario2` (`id_usuario`),
-  KEY `id_post` (`id_post`),
-  CONSTRAINT `id_post` FOREIGN KEY (`id_post`) REFERENCES `posts` (`id`) ON UPDATE NO ACTION,
   CONSTRAINT `id_usuario2` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=201 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -63,7 +61,7 @@ CREATE TABLE `posts` (
   PRIMARY KEY (`id`),
   KEY `id_usuario` (`id_usuario`),
   CONSTRAINT `id_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,7 +70,7 @@ CREATE TABLE `posts` (
 
 LOCK TABLES `posts` WRITE;
 /*!40000 ALTER TABLE `posts` DISABLE KEYS */;
-INSERT INTO `posts` VALUES (1,1,NULL,'Hola!','2018-12-01 00:00:00'),(2,1,NULL,'Chau!','2019-11-15 00:00:00'),(3,1,NULL,'Todo bien?','2019-11-16 00:00:00'),(4,1,NULL,'Me alegro!','2019-11-16 00:00:00'),(5,1,NULL,'Aguante todo','2019-11-17 00:00:00'),(6,1,NULL,'Re largo esto','2019-11-17 00:00:00'),(7,1,NULL,'Tengo suenio','2019-11-17 00:00:00'),(8,1,NULL,'Estoy cansado','2019-11-18 00:00:00'),(9,1,NULL,'Ahora tengo energía','2019-11-20 00:00:00'),(10,1,NULL,'Buenas tardes','2019-11-21 00:00:00'),(11,2,NULL,'Tengo calor','2017-05-06 00:00:00'),(12,2,NULL,'Tengo frío','2017-05-06 00:00:00'),(13,2,NULL,'Ahora calor otra vez','2017-05-07 00:00:00'),(14,2,NULL,'Tengo hambre','2017-05-09 00:00:00'),(15,2,NULL,'Estoy tranquilo','2017-05-10 00:00:00'),(16,2,NULL,'Estoy nervioso','2017-05-15 00:00:00'),(17,2,NULL,'Estoy enojado','2017-05-17 00:00:00'),(18,2,NULL,'Estoy contento','2017-05-28 00:00:00'),(19,2,NULL,'Es invierno','2017-06-05 00:00:00'),(20,2,NULL,'Quiero que sea verano','2017-06-06 00:00:00'),(21,3,NULL,'River','2018-02-03 00:00:00'),(22,3,NULL,'Boca','2018-02-04 00:00:00'),(23,3,NULL,'San Lorenzo','2018-02-04 00:00:00'),(24,3,NULL,'Racing','2018-02-05 00:00:00'),(25,3,NULL,'Independiente','2018-02-06 00:00:00'),(26,3,NULL,'Huracán','2018-02-10 00:00:00'),(27,3,NULL,'Colón','2018-02-11 00:00:00'),(28,3,NULL,'Chacarita','2018-02-14 00:00:00'),(29,3,NULL,'Banfield','2018-02-15 00:00:00'),(30,3,NULL,'Gimnasia','2018-02-19 00:00:00'),(31,4,NULL,'Estudiantes','2019-04-11 00:00:00'),(32,4,NULL,'Newells','2019-04-11 00:00:00'),(33,4,NULL,'Rosario Central','2019-04-11 00:00:00'),(34,4,NULL,'Arsenal','2019-04-12 00:00:00'),(35,4,NULL,'Belgrano','2019-04-12 00:00:00'),(36,4,NULL,'Talleres','2019-04-14 00:00:00'),(37,4,NULL,'Aldosivi','2019-04-15 00:00:00'),(38,4,NULL,'Tigre','2019-04-16 00:00:00'),(39,4,NULL,'Patronato','2019-04-17 00:00:00'),(40,4,NULL,'Atlanta','2019-04-17 00:00:00'),(41,5,NULL,'Día','2018-06-09 00:00:00'),(42,5,NULL,'Noche','2018-06-09 00:00:00'),(43,5,NULL,'Argentina','2018-06-10 00:00:00'),(44,5,NULL,'Paraguay','2018-06-11 00:00:00'),(45,5,NULL,'Brasil','2018-06-12 00:00:00'),(46,5,NULL,'Uruguay','2018-06-12 00:00:00'),(47,5,NULL,'Chile','2018-06-12 00:00:00'),(48,5,NULL,'Colombia','2018-06-13 00:00:00'),(49,5,NULL,'Ecuador','2018-06-17 00:00:00'),(50,5,NULL,'Perú','2018-06-17 00:00:00');
+INSERT INTO `posts` VALUES (1,2,'https://elestilolibre.com/wp-content/uploads/','Hola amigos!','2018-12-01 00:00:00'),(2,3,'https://i.pinimg.com/originals/f9/74/a2/f974a','Un hombre soy...','2019-11-15 00:00:00'),(3,4,'https://i.pinimg.com/originals/af/12/52/af125','SSJ',NULL),(4,5,'https://vertele.eldiario.es/2019/05/15/notici','Cielos Rick',NULL),(5,6,'https://vignette.wikia.nocookie.net/rick-y-mo','Que miras',NULL);
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,9 +90,10 @@ CREATE TABLE `usuarios` (
   `fecha_nacimiento` datetime DEFAULT NULL,
   `preguntaElegida` int(11) DEFAULT NULL,
   `preguntaRespuesta` varchar(45) DEFAULT NULL,
+  `fotoPerfil` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -103,7 +102,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'BoJack','2015-05-23 00:00:00','bojack@gmail.com','paredes','1996-02-28 00:00:00',NULL,NULL),(2,'Pluzito','2019-12-04 00:00:00','pluzito@gmail.com','siluetas','1990-04-05 00:00:00',NULL,NULL),(3,'Bob Esponja','2015-07-24 00:00:00','bob@gmail.com','esponjamojada','1978-07-06 00:00:00',NULL,NULL),(4,'Goku','2014-09-11 00:00:00','goku@gmail.com','fuego123','1823-11-13 00:00:00',NULL,NULL),(5,'Morty','2015-02-27 00:00:00','morty@gmail.com','yugoslavia','1998-12-12 00:00:00',NULL,NULL),(6,'Rick','2016-01-02 00:00:00','rick@gmail.com','palangana130','1995-01-01 00:00:00',NULL,NULL),(7,'Juan','2020-10-19 16:50:06','juan@gmail.com','juan','1990-05-05 00:00:00',NULL,NULL);
+INSERT INTO `usuarios` VALUES (1,'BoJack','2015-05-23 00:00:00','bojack@gmail.com','paredes','1996-02-28 00:00:00',NULL,NULL,'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQ'),(2,'Pluzito','2019-12-04 00:00:00','pluzito@gmail.com','siluetas','1990-04-05 00:00:00',NULL,NULL,'https://pbs.twimg.com/profile_images/11954817'),(3,'Bob Esponja','2015-07-24 00:00:00','bob@gmail.com','esponjamojada','1978-07-06 00:00:00',NULL,NULL,'https://phantom-marca.unidadeditorial.es/3e2a'),(4,'Goku','2014-09-11 00:00:00','goku@gmail.com','fuego123','1823-11-13 00:00:00',NULL,NULL,'https://www.latercera.com/resizer/Am6Tr2ws8Jn'),(5,'Morty','2015-02-27 00:00:00','morty@gmail.com','yugoslavia','1998-12-12 00:00:00',NULL,NULL,'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgA'),(6,'Rick','2016-01-02 00:00:00','rick@gmail.com','palangana130','1995-01-01 00:00:00',NULL,NULL,'https://vader.news/__export/1592454315077/sit'),(7,'Juan','2020-10-19 16:50:06','juan@gmail.com','juan','1990-05-05 00:00:00',NULL,NULL,NULL),(12,'Sebastian Sosa','2020-10-19 20:00:42','sebastiansosa@gmail.com',NULL,'2008-03-23 00:00:00',2,'Sudafrica',NULL),(13,'Armando S','2020-10-19 20:02:48','armando@gmail.com',NULL,'1996-01-12 00:00:00',1,'Rojo',NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -120,4 +119,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-19 14:12:23
+-- Dump completed on 2020-10-19 22:50:46
