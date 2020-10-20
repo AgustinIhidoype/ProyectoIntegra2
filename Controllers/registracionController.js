@@ -7,7 +7,6 @@ let registracionController = {
     },
     registrado: function(req,res){
         let usuario = {
-            
             nombre_usuario: req.body.username,
             email: req.body.email,
             contrasenia: bcrypt.hashSync(req.body.password, 10),
