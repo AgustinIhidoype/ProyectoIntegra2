@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `proyectoint` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-USE `proyectoint`;
 -- MariaDB dump 10.17  Distrib 10.4.14-MariaDB, for Win64 (AMD64)
 --
 -- Host: 127.0.0.1    Database: proyectoint
@@ -102,7 +100,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'BoJack','2015-05-23 00:00:00','bojack@gmail.com','paredes','1996-02-28 00:00:00',NULL,NULL,'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQ'),(2,'Pluzito','2019-12-04 00:00:00','pluzito@gmail.com','siluetas','1990-04-05 00:00:00',NULL,NULL,'https://pbs.twimg.com/profile_images/11954817'),(3,'Bob Esponja','2015-07-24 00:00:00','bob@gmail.com','esponjamojada','1978-07-06 00:00:00',NULL,NULL,'https://phantom-marca.unidadeditorial.es/3e2a'),(4,'Goku','2014-09-11 00:00:00','goku@gmail.com','fuego123','1823-11-13 00:00:00',NULL,NULL,'https://www.latercera.com/resizer/Am6Tr2ws8Jn'),(5,'Morty','2015-02-27 00:00:00','morty@gmail.com','yugoslavia','1998-12-12 00:00:00',NULL,NULL,'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgA'),(6,'Rick','2016-01-02 00:00:00','rick@gmail.com','palangana130','1995-01-01 00:00:00',NULL,NULL,'https://vader.news/__export/1592454315077/sit'),(7,'Juan','2020-10-19 16:50:06','juan@gmail.com','juan','1990-05-05 00:00:00',NULL,NULL,NULL),(12,'Sebastian Sosa','2020-10-19 20:00:42','sebastiansosa@gmail.com',NULL,'2008-03-23 00:00:00',2,'Sudafrica',NULL),(13,'Armando S','2020-10-19 20:02:48','armando@gmail.com',NULL,'1996-01-12 00:00:00',1,'Rojo',NULL);
+INSERT INTO `usuarios` VALUES (1,'BoJack','2015-05-23 00:00:00','bojack@gmail.com','paredes','1996-02-28 00:00:00',NULL,NULL,'../public/images/fotoperfilbojack.jpg'),(2,'Pluzito','2019-12-04 00:00:00','pluzito@gmail.com','siluetas','1990-04-05 00:00:00',NULL,NULL,'../public/images/lafotodepluzito.jpg'),(3,'Bob Esponja','2015-07-24 00:00:00','bob@gmail.com','esponjamojada','1978-07-06 00:00:00',NULL,NULL,'../public/images/fotoperfilbobesponja/jpg'),(4,'Goku','2014-09-11 00:00:00','goku@gmail.com','fuego123','1823-11-13 00:00:00',NULL,NULL,'https://www.latercera.com/resizer/Am6Tr2ws8Jn'),(5,'Morty','2015-02-27 00:00:00','morty@gmail.com','yugoslavia','1998-12-12 00:00:00',NULL,NULL,'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgA'),(6,'Rick','2016-01-02 00:00:00','rick@gmail.com','palangana130','1995-01-01 00:00:00',NULL,NULL,'https://vader.news/__export/1592454315077/sit'),(7,'Juan','2020-10-19 16:50:06','juan@gmail.com','juan','1990-05-05 00:00:00',NULL,NULL,NULL),(12,'Sebastian Sosa','2020-10-19 20:00:42','sebastiansosa@gmail.com',NULL,'2008-03-23 00:00:00',2,'Sudafrica',NULL),(13,'Armando S','2020-10-19 20:02:48','armando@gmail.com',NULL,'1996-01-12 00:00:00',1,'Rojo',NULL);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -119,4 +117,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-19 22:50:46
+-- Dump completed on 2020-10-24 17:11:37
