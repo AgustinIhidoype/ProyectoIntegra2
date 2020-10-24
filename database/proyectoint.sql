@@ -55,7 +55,7 @@ CREATE TABLE `posts` (
   `id_usuario` int(12) NOT NULL,
   `url_imagen` varchar(45) DEFAULT NULL,
   `texto` varchar(45) DEFAULT NULL,
-  `fecha_publicación` datetime DEFAULT NULL,
+  `fecha_publicación` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
   KEY `id_usuario` (`id_usuario`),
   CONSTRAINT `id_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON UPDATE NO ACTION
@@ -68,7 +68,7 @@ CREATE TABLE `posts` (
 
 LOCK TABLES `posts` WRITE;
 /*!40000 ALTER TABLE `posts` DISABLE KEYS */;
-INSERT INTO `posts` VALUES (1,2,'https://elestilolibre.com/wp-content/uploads/','Hola amigos!','2018-12-01 00:00:00'),(2,3,'https://i.pinimg.com/originals/f9/74/a2/f974a','Un hombre soy...','2019-11-15 00:00:00'),(3,4,'https://i.pinimg.com/originals/af/12/52/af125','SSJ',NULL),(4,5,'https://vertele.eldiario.es/2019/05/15/notici','Cielos Rick',NULL),(5,6,'https://vignette.wikia.nocookie.net/rick-y-mo','Que miras',NULL);
+INSERT INTO `posts` VALUES (1,2,'https://elestilolibre.com/wp-content/uploads/','Hola amigos!','2018-12-01 03:00:00'),(2,3,'https://i.pinimg.com/originals/f9/74/a2/f974a','Un hombre soy...','2019-11-15 03:00:00'),(3,4,'https://i.pinimg.com/originals/af/12/52/af125','SSJ',NULL),(4,5,'https://vertele.eldiario.es/2019/05/15/notici','Cielos Rick',NULL),(5,6,'https://vignette.wikia.nocookie.net/rick-y-mo','Que miras',NULL);
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,4 +117,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-10-24 17:11:37
+-- Dump completed on 2020-10-24 17:38:08
