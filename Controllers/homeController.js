@@ -7,10 +7,6 @@ let homeController = {
         .then(function(posteos){
             res.render('home', {posteos: posteos})
         })
-        db.Usuario.findAll()
-        .then(function(usuarios){
-            res.render('home', {usuarios: usuarios})
-        })
     },
     prueba: function(req, res) {
         db.Usuario.findAll()
