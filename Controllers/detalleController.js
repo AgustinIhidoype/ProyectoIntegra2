@@ -1,3 +1,5 @@
+let db = require("../db/models/index");
+
 let detalleController={
     
     post: function(req,res){
@@ -5,8 +7,13 @@ let detalleController={
         res.render ("detallePost", )
     },
     usuario: function(req,res){
-    
-        res.render ("detalleUsuario", )
+        let idUsuario= req.params.id;
+        db.Usuario.findByPk(idUsuario)
+        .then(function(elUsuario){
+
+            res.render ("detalleUsuario", {elUsuario:elUsuario})
+        })
+       
     }
     
     }
