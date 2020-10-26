@@ -9,7 +9,7 @@ let registracionController = {
         let usuario = {
             nombre_usuario: req.body.username,
             email: req.body.email,
-            contrasenia: bcrypt.hashSync(req.body.password, 10),
+            constrasenia: bcrypt.hashSync(req.body.password, 10),
             fecha_nacimiento: req.body.nacimiento,
             preguntaElegida: req.body.preguntaElegida,
             preguntaRespuesta: req.body.preguntaRespuesta

@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+//requiere session
+var session = require ("express-session");
 
 
 
@@ -25,6 +27,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+//session
+app.use(session ({secret:"integra2"}));
+app.use(function(req, res, next){
+
+  res.locals ={
+    usuarioLogueado: req.session.usuarioLogueado
+  }
+  next();
+})
 
 // RUTAS CREADAS X NOSOTROS
 let rutaHome = require ("./routes/home");
