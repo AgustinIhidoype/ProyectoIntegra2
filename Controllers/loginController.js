@@ -5,13 +5,17 @@ let loginController = {
         res.render("login", )
     },
     logueado: function(req,res){
-       
+        if (req.session.usuarioLogueado != undefined) {
+            res.redirect("/home");
+        }
         db.Usuario.findOne({
+            
             where: [
                 {email: req.body.email}
             ]
         }  )
         .then (function(user){
+        
             if (user == null){
                 res.send ("Usuario invalido")
         
