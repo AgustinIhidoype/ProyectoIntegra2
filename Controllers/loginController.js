@@ -22,6 +22,9 @@ let loginController = {
             }
             else if (bcrypt.compareSync(req.body.password, user.constrasenia) == false){
                 res.send ("Contraseña incorrecta")
+
+                console.log(req.body)
+                console.log(user)                
             }
             else {
                 req.session.usuarioLogueado = user;

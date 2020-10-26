@@ -30,6 +30,7 @@ app.use('/users', usersRouter);
 
 //session
 app.use(session ({secret:"integra2"}));
+
 app.use(function(req, res, next){
 
   res.locals ={

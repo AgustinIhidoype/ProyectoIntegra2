@@ -29,7 +29,13 @@
 </head>
 
 <body>
+
+<% if (usuarioLogueado != undefined) { %>
+    <%- include("headerLogueado") %> 
+<% }else{ %> 
     <%- include("headerDeslogueado") %> 
+    <% } %> 
+    
 
     <main>
         <div class="uk-section uk-section-small">
