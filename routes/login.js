@@ -6,4 +6,6 @@ router.get ("/" , loginController.login)
 
 router.post('/logueado', loginController.logueado)
 
+router.get('/desloguear', loginController.desloguear)
+
 module.exports = router;

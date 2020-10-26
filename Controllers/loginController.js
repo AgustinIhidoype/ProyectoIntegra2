@@ -31,6 +31,11 @@ let loginController = {
                 res.redirect("/home")
             }
         })
+    },
+    desloguear: function(req, res){
+        req.session.usuarioLogueado = undefined;
+
+        res.redirect('/home')
     }
     
 }

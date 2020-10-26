@@ -27,7 +27,12 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
 </head>
 <body>
-    <%- include("headerDeslogueado") %> 
+    <% if (usuarioLogueado != undefined) { %>
+        <%- include("headerLogueado") %> 
+    <% }else{ %> 
+        <%- include("headerDeslogueado") %> 
+    <% } %> 
+     
     <div class='main'>
     <h1>Resultados de la búsqsueda:</h1>
 
