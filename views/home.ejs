@@ -67,6 +67,15 @@
                             <div class="post-pie uk-flex">
                                 <h5 class="uk-width-1-6">Pluzito</h5>
                                 <p class="uk-width-5-6"><%= posteos[i].texto %> </p>
+                             <!-- < if (req.session.usuarioLogueado.id== posteos[i].id_usuario) { %> 
+                                 
+                              
+                                <form action="/home/borrarpost">
+                                <input type="hidden" name="idBorrar" value="< posteos[i].id %> ">
+                                <button type="sumbit">Eliminar Post</button>
+                                </form>
+                                < } %>  -->
+                               
                             </div>
                         </div>
                         <div class="post-comentarios">

@@ -28,7 +28,18 @@ let homeController = {
         .then(function(usuarios){
             res.render('resultados', {usuarios: usuarios})
         })
-    }
+    },
+    delete: function(req,res){
+        let idPost = req.body.idBorrar
+        db.Usuario.destroy({
+            where: {
+                id : idPost
+            }
+        })
+        .then(function(){
+            res.redirect ("/home")
+        })
+    },
 }
 
 module.exports = homeController
