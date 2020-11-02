@@ -47,7 +47,7 @@
                     <article class="post uk-card-default uk-flex uk-flex-column">
                         <div class="info-usuario uk-flex ">
                             <div>
-                                <img src="https://pbs.twimg.com/profile_images/1195481712031088641/gUA3njfL_400x400.jpg" class="fotoPerfil" alt="">
+                                <img src="/images/<%= posteos[i].Usuario.fotoPerfil %> " class="fotoPerfil" alt="">
                             </div>
                             
                             <h4><a href="/detalle/usuario" class="perfilPluzito"></a>  <%= posteos[i].Usuario.nombre_usuario %> </h4>
@@ -55,7 +55,7 @@
                             
                         </div>
                         <div class="post-body uk-flex uk-flex-center">
-                            <img class="fotoPost" src="<%= posteos[i].url_imagen %> " alt="">
+                            <img class="fotoPost" src="/images/posts/<%= posteos[i].url_imagen %> " alt="">
                         </div>
                         <div class="post-reacciones">
                             <ul class="post-icons uk-flex uk-flex-between">
@@ -65,9 +65,9 @@
                                 </li>
                             </ul>
                             <div class="post-pie uk-flex">
-                                <h5 class="uk-width-1-6">Pluzito</h5>
+                                <h5 class="uk-width-1-6"> <%= posteos[i].Usuario.nombre_usuario %></h5>
                                 <p class="uk-width-5-6"><%= posteos[i].texto %> </p>
-                               <% if (usuarioLogueado !=undefined) { %>
+                               <% if (usuarioLogueado != undefined) { %>
                                 <% if (usuarioLogueado.id == posteos[i].id_usuario) { %>
                                     <form action="/home/borrarpost" method="POST">
                                         <input type="hidden" name="idBorrar" value="<%= posteos[i].id %> ">
@@ -81,7 +81,25 @@
                         </div>
                         <div class="post-comentarios">
                             <h6>Comentarios</h6>
-                            <ul>
+                            <% for( let j = 0; j < posteos[i].Comentario.length; j++ ) { %>
+                            
+                                <ul>
+                                    <li>
+                                        <a href="/detalle/usuario/<%= posteos[i].Comentario[j].id_usuario %>">  <%= posteos[i].Comentario[j] %> </a>
+                                        <p><%= posteos[i].Comentario[j].comentario %> </p>
+                                    </li>
+                                </ul>
+
+                            <% } %>
+                            <% if (usuarioLogueado != undefined) { %>
+                             
+                            <div>
+                                <form action="" method="post"></form>
+                            </div>
+
+                            <% } %>
+                            
+                            <!-- <ul>
                                 <li>
                                     <a href="">Pikachu</a>
                                     <p>Pika pika</p>
@@ -91,7 +109,7 @@
                                     <p>Pika pika</p>
                                 </li>
                                 <a href="">Ver más...</a>
-                            </ul>
+                            </ul> -->
                         </div>
                     </article>
 

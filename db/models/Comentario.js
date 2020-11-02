@@ -26,5 +26,12 @@ module.exports = (sequelize, DataTypes) => {
 
     let Comentario = sequelize.define("Comentario", cols, config);
 
+    Comentario.associate = function (models){
+        Comentario.belongsTo (models.Post,{
+            as: "Post",
+            foreignKey: "id_post"
+        })
+    }
+
     return Comentario;
 }

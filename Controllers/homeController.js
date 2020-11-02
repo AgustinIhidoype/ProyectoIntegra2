@@ -5,7 +5,8 @@ let homeController = {
     posteos: function (req, res) {
         db.Post.findAll({
             include: [
-                {association: "Usuario"}
+                {association: "Usuario"},
+                {association: 'Comentario'}
             ]
         })
         .then(function(posteos){

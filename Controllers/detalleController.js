@@ -8,7 +8,11 @@ let detalleController={
     },
     usuario: function(req,res){
         let idUsuario= req.params.id;
-        db.Usuario.findByPk(idUsuario)
+        db.Usuario.findByPk(idUsuario, {
+            include: [
+                {association: 'Post'}
+            ]
+        })
         .then(function(elUsuario){
 
             res.render ("detalleUsuario", {elUsuario:elUsuario})
