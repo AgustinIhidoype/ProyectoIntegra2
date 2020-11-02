@@ -27,7 +27,10 @@ let loginController = {
                 console.log(user)                
             }
             else {
-                req.session.usuarioLogueado = user;
+                req.session.usuarioLogueado = user; 
+               
+        
+
                 res.redirect("/home")
             }
         })

@@ -3,7 +3,11 @@ let op = db.Sequelize.Op;
 
 let homeController = {
     posteos: function (req, res) {
-        db.Post.findAll()
+        db.Post.findAll({
+            include: [
+                {association: "Usuario"}
+            ]
+        })
         .then(function(posteos){
             res.render('home', {posteos: posteos})
         })
@@ -30,8 +34,9 @@ let homeController = {
         })
     },
     delete: function(req,res){
-        let idPost = req.body.idBorrar
-        db.Usuario.destroy({
+        let idPost = req.body.idBorrar;
+
+        db.Post.destroy({
             where: {
                 id : idPost
             }

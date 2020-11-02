@@ -8,7 +8,7 @@ let agregarPostController={
     },
     posteado: function(req,res){
         let post = {
-            id_usuario: req.body,
+            id_usuario: req.session.usuarioLogueado.id,
             url_imagen: req.body.foto,
             texto: req.body.texto
         }

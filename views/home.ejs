@@ -50,7 +50,7 @@
                                 <img src="https://pbs.twimg.com/profile_images/1195481712031088641/gUA3njfL_400x400.jpg" class="fotoPerfil" alt="">
                             </div>
                             
-                            <h4><a href="/detalle/usuario" class="perfilPluzito"></a>  <%= posteos[i].id_usuario %> </h4>
+                            <h4><a href="/detalle/usuario" class="perfilPluzito"></a>  <%= posteos[i].Usuario.nombre_usuario %> </h4>
                             
                             
                         </div>
@@ -67,15 +67,16 @@
                             <div class="post-pie uk-flex">
                                 <h5 class="uk-width-1-6">Pluzito</h5>
                                 <p class="uk-width-5-6"><%= posteos[i].texto %> </p>
-                             <!-- < if (req.session.usuarioLogueado.id== posteos[i].id_usuario) { %> 
-                                 
+                               <% if (usuarioLogueado !=undefined) { %>
+                                <% if (usuarioLogueado.id == posteos[i].id_usuario) { %>
+                                    <form action="/home/borrarpost" method="POST">
+                                        <input type="hidden" name="idBorrar" value="<%= posteos[i].id %> ">
+                                        <button type="sumbit">Eliminar Post</button>
+                                        </form>
+                                      
+                                <%  } %> 
+                               <% } %>
                               
-                                <form action="/home/borrarpost">
-                                <input type="hidden" name="idBorrar" value="< posteos[i].id %> ">
-                                <button type="sumbit">Eliminar Post</button>
-                                </form>
-                                < } %>  -->
-                               
                             </div>
                         </div>
                         <div class="post-comentarios">

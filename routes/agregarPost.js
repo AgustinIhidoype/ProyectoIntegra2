@@ -4,6 +4,6 @@ var agregarPostController = require ('../Controllers/agregarPostController')
 
 router.get ("/" , agregarPostController.agregarPost )
 
-router.get('/posteado', agregarPostController.posteado)
+router.post('/posteado', agregarPostController.posteado)
 
 module.exports = router;

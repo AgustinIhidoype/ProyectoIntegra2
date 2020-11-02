@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         url_imagen: {
             type: DataTypes.STRING
+
         },
         texto: {
             type: DataTypes.STRING
@@ -29,5 +30,12 @@ module.exports = (sequelize, DataTypes) => {
 
     let Post = sequelize.define("Post", cols, config);
 
+    Post.associate = function (models){
+    Post.belongsTo (models.Usuario,{
+        as: "Usuario",
+        foreignKey: "id_usuario"
+    })
+}
     return Post;
+    
 }
