@@ -55,7 +55,7 @@ DROP TABLE IF EXISTS `posts`;
 CREATE TABLE `posts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_usuario` int(12) NOT NULL,
-  `url_imagen` varchar(45) DEFAULT NULL,
+  `url_imagen` varchar(255) DEFAULT NULL,
   `texto` varchar(45) DEFAULT NULL,
   `fecha_publicación` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
@@ -115,4 +115,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-02 10:38:30
+-- Dump completed on 2020-11-02 10:40:17
