@@ -3,15 +3,16 @@ let op = db.Sequelize.Op;
 
 let miPerfilController = {
     perfil1: function (req, res) {
-        let idMio = req.session.usuarioLogueado.id
+        //let idMio = req.session.usuarioLogueado.id//
 
         db.Post.findAll({
-            where : [
-                {id_usuario : idMio}]
+        include: [
+            {association: "Usuario"}
+        ]
         })
 
-        .then(function(usuarioYo){
-            res.render("miPerfil", {usuarioYo: usuarioYo})
+        .then(function(posteosUsuario){
+            res.render("miPerfil", {posteosUsuario: posteosUsuario})
         })
     }
 }
