@@ -35,11 +35,11 @@
             <div class="uk-container uk-container-small">
                 <section class="info-usuario uk-flex uk-flex-around uk-width-1-1">
                     <div class="uk-width-1-3 uk-flex uk-flex-center uk-flex-middle">
-                        <img src="/images/<%= usuarioYo.fotoPerfil %> " width= 300px alt="foto de perfil" class="foto-perfil">
+                        <img src="" width= 300px alt="foto de perfil" class="foto-perfil">
                     </div>
                     <div class="uk-width-2-3 uk-flex uk-flex-column uk-flex-around">
                         <div class="uk-flex uk-flex-middle">
-                            <h3 class="NombrePerfil"><%= usuarioYo.nombre_usuario %> </h3>
+                            <h3 class="NombrePerfil"> </h3>
                             <a href="" uk-icon="icon:cog; ratio: 1.2" class="uk-margin-left"></a>
                         </div>
                         <div>
@@ -55,7 +55,36 @@
 
                 <section class="muro uk-flex uk-flex-middle uk-flex-center">
                     <div class="uk-grid uk-child-width-1-3 uk-width-1-1 uk-margin-remove" uk-grid>
-                        <div
+
+<% if (usuarioYo != null) { %>
+    <% for( let i = 0; i < usuarioYo[i].length; i++ ) { %>
+                        
+        <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
+
+            <a href="">
+                <img src="<%= usuarioYo[i].url_imagen %> " class="post" alt="">
+                <p class="uk-text-center"><%= usuarioYo[i].texto %> </p>
+
+            </a>
+            <!-- <a href="" class="link-detalle">
+                <img src="https://elestilolibre.com/wp-content/uploads/2020/09/pluzito-650x424-1.jpg" alt="foto de perfil" class="post">
+                <p class="uk-text-center">Post #6</p>
+            </a> -->
+        </div>
+
+    <% } %>
+
+<% }else{ %>
+<div></div>
+<% } %>
+                       
+
+
+
+
+
+
+                        <!-- <div
                             class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
                             <a href="" class="link-detalle">
                                 <img src="https://elestilolibre.com/wp-content/uploads/2020/09/pluzito-650x424-1.jpg" alt="foto de perfil" class="post">
@@ -96,7 +125,7 @@
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQGHe1396AChu_vClvCzN9pqf5lTP7Lz0eTCQ&usqp=CAU" alt="foto de perfil" class="post">
                                 <p class="uk-text-center">Post #1</p>
                             </a>
-                        </div>
+                        </div> -->
 
 
 
