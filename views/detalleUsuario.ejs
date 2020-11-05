@@ -62,12 +62,12 @@
                     
 
                     
-                        <% for( let i = 0; i < elUsuario.Post[i].length; i++ ) { %>
+                        <% for( let i = 0; i < elUsuario.Post.length; i++ ) { %>
                         
                             <div class="uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center ">
 
-                                <a href="">
-                                    <img src="<%= elUsuario.Post[i].url_imagen %> " class="post" alt="">
+                                <a href="/detalle/post/<%= elUsuario.Post[i].id %> ">
+                                    <img src="/images/posts/<%= elUsuario.Post[i].url_imagen %> " class="post" alt="">
                                     <p class="uk-text-center"><%= elUsuario.Post[i].texto %> </p>
 
                                 </a>
