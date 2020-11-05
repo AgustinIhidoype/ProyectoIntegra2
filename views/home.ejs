@@ -46,11 +46,15 @@
                     
                     <article class="post uk-card-default uk-flex uk-flex-column">
                         <div class="info-usuario uk-flex ">
-                            <div>
-                                <img src="/images/<%= posteos[i].Usuario.fotoPerfil %> " class="fotoPerfil" alt="">
-                            </div>
+                            <a href="/detalle/usuario/<%= posteos[i].Usuario.id %> ">
+                                <div>
+                                    <img src="/images/<%= posteos[i].Usuario.fotoPerfil %> " class="fotoPerfil" alt="">
+                                </div>
+                            </a>
+                            <a href="/detalle/usuario/<%= posteos[i].Usuario.id %> ">
+                                <h4><%= posteos[i].Usuario.nombre_usuario %></h4>
+                            </a>
                             
-                            <h4><a href="/detalle/usuario" class="perfilPluzito"></a>  <%= posteos[i].Usuario.nombre_usuario %> </h4>
                             
                             
                         </div>
@@ -91,13 +95,9 @@
                                 </ul>
 
                             <% } %>
-                            <% if (usuarioLogueado != undefined) { %>
                              
-                            <div>
-                                <form action="" method="post"></form>
-                            </div>
+                                <a href="/detalle/post/<%= posteos[i].id %> ">Ver más...</a>
 
-                            <% } %>
                             
                             <!-- <ul>
                                 <li>

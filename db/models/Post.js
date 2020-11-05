@@ -34,14 +34,14 @@ module.exports = (sequelize, DataTypes) => {
         Post.belongsTo (models.Usuario,{
             as: "Usuario",
             foreignKey: "id_usuario"
-    })
+        })
 
         Post.hasMany (models.Comentario, {
             as: "Comentario",
             foreignKey: "id_post"
         })
         
-}
+    }
     return Post;
     
 }
