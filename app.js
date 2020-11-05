@@ -33,7 +33,7 @@ app.use(session ({secret:"integra2"}));
 
 app.use(function(req, res, next){
 
-  res.locals ={
+  res.locals = {
     usuarioLogueado: req.session.usuarioLogueado
   }
   next();

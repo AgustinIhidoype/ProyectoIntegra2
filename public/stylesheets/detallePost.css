@@ -68,5 +68,11 @@ section.detalle-container{
     margin-right: 4px !important;
 }
 
+.comentarioDeslogueado{
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+    margin-right: 4px !important;
+}
 
 
