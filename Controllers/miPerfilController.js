@@ -12,6 +12,7 @@ let miPerfilController = {
         })
 
         .then(function(usuarioYo){
+         
             res.render("miPerfil", {usuarioYo: usuarioYo})
         })
     }

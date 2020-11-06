@@ -6,7 +6,7 @@ let homeController = {
         db.Post.findAll({
             include: [
                 {association: "Usuario"},
-                {association: 'Comentario'}
+                {association: "Comentario"}
             ]
         })
         .then(function(posteos){
