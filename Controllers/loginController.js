@@ -29,10 +29,14 @@ let loginController = {
             else {
                 req.session.usuarioLogueado = user; 
                
-        
+                if(req.body.remember != undefined) {
+                    res.cookie('idDelUsuarioLogueado', user.id, {maxAge : 1000  * 2})
+                }
 
-                res.redirect("/home")
+               
             }
+            res.redirect("/home")
+            
         })
     },
     desloguear: function(req, res){

@@ -39,6 +39,20 @@ app.use(function(req, res, next){
   next();
 })
 
+app.use(function(req,res,next){
+  if (req.cookies.usuarioLogueado != undefined && req.session.usuarioLogueado == undefined) {
+    db.Usuario.findByPk(req.cookies.idDelUsuarioLogueado)
+    .then(function(usuario){
+      req.session.usuarioLogueado = usuario;
+      res.redirect(req.originalUrl)
+    })
+  } else {
+    next();
+  }  
+})
+
+
+
 // RUTAS CREADAS X NOSOTROS
 let rutaHome = require ("./routes/home");
 app.use ("/home" , rutaHome);
