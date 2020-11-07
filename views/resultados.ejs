@@ -36,17 +36,24 @@
     <div class='main'>
     <h1>Resultados de la búsqsueda:</h1>
 
-    <ul>
-    <% for( let i = 0; i < usuarios.length; i++ ) { %>
     
-        <a href="/detalle/usuario/ <%= usuarios[i].id %>"><li>
-            <img class='fotos' src="/images/<%= usuarios[i].fotoPerfil %>" width= 300px alt="foto de perfil" class="foto-perfil">
-            Hacé click acá para entrar al perfil de <%= usuarios[i].nombre_usuario %> 
-        </li>
-        </a>
+        <% if (usuarios != 0) { %>
+         
+        <ul>
+            <% for( let i = 0; i < usuarios.length; i++ ) { %>
+            
+                <a href="/detalle/usuario/ <%= usuarios[i].id %>"><li>
+                    <img class='fotos' src="/images/<%= usuarios[i].fotoPerfil %>" width= 300px alt="foto de perfil" class="foto-perfil">
+                    Hacé click acá para entrar al perfil de <%= usuarios[i].nombre_usuario %> 
+                </li>
+                </a>
 
-    <% } %>
-    </ul>
+            <% } %>
+        </ul>
+        <% } else { %>
+                <p>No se ha encontrado ningún usuario con ese nombre</p>
+        <% } %>
+    
     </div>
     <%- include("footer") %> 
 </body>
