@@ -18,7 +18,17 @@ let detalleController={
         
     },
     comentado: function(req,res){
-        res.render('detallePost')
+        let comentario = {
+            id_post: req.body.idDelPost,
+            id_usuario: req.session.usuarioLogueado.id,
+            comentario: req.body.comentario
+        }
+
+        db.Comentario.create(comentario)
+        .then(function(){
+            res.redirect('/home')
+        })
+        
     },
     usuario: function(req,res){
         let idUsuario= req.params.id;
@@ -55,7 +65,7 @@ let detalleController={
             })
 
         .then(function(){
-            res.redirect('/home')
+            res.redirect('home')
         })
     }
     
