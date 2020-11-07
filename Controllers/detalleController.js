@@ -32,6 +32,31 @@ let detalleController={
             res.render ("detalleUsuario", {elUsuario:elUsuario})
         })
        
+    },
+    editar: function(req,res){
+        idDelPost = req.params.id
+
+        db.Post.findByPk(idDelPost)
+
+        .then(function(postEditando){
+            res.render('editarPost', {postEditando: postEditando})
+        })
+    },
+    actualizacion: function(req,res){
+
+        let usuario = {
+            texto: req.body.texto
+        }
+
+        db.Post.update(usuario, {
+            where: {
+                id: req.body.idDelPost
+            }
+            })
+
+        .then(function(){
+            res.redirect('/home')
+        })
     }
     
     }

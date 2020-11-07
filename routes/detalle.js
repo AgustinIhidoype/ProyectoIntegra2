@@ -7,5 +7,8 @@ router.get ("/usuario/:id" , detalleController.usuario)
 
 router.post('/comentado', detalleController.comentado)
 
+router.get('/editar/:id', detalleController.editar)
+router.post('/editar/editado', detalleController.actualizacion)
+
 
 module.exports = router;

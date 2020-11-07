@@ -3,12 +3,17 @@ let op = db.Sequelize.Op;
 
 let homeController = {
     posteos: function (req, res) {
-        db.Post.findAll({
+        db.Post.findAll(
+        {
             include: [
                 {association: "Usuario"},
                 {association: "Comentario"}
+            ],
+            order: [
+                ['fecha_publicación', 'DESC']
             ]
-        })
+        },
+        )
         .then(function(posteos){
             res.render('home', {posteos: posteos})
         })

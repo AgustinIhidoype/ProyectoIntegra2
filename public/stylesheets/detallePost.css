@@ -67,7 +67,11 @@ section.detalle-container{
     text-decoration: none;
     margin-right: 4px !important;
 }
-
+.textoPost{
+    font-weight: bolder;
+    font-size: 16px;
+    text-align: center;
+}
 .comentarioDeslogueado{
     font-size: 15px;
     color: black;
