@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel="stylesheet" href="/stylesheets/footer.css">
     <link rel="stylesheet" href="/stylesheets/general.css">
+    <link rel="stylesheet" href="/stylesheets/buscadorPosteo.css">
 
     <!-- UiKit -->
     <!-- <link rel="stylesheet" href="css/uikit.min.css">
@@ -36,23 +37,17 @@
         <%- include("headerDeslogueado") %> 
     <% } %> 
 
-    <form action="/home/resultadosPost" method='GET' class="uk-search uk-search-default">
-        <span uk-search-icon></span>
+    <main>
+    <h1>Buscá el posteo que quieras</h1>
+
+    <form action="/home/resultadosPost" method='GET' class="buscador">
+        
         <input type="search" class="uk-search-input" name='buscadorPost' placeholder="¿Qué post estás buscando?">
         </form>
 
 
 
-
-
-
-
-
-
-
-
-
-
+    </main>
     <%- include("footer") %> 
 
 </body>
