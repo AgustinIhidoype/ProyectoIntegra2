@@ -61,7 +61,7 @@ CREATE TABLE `posts` (
   PRIMARY KEY (`id`),
   KEY `id_usuario` (`id_usuario`),
   CONSTRAINT `id_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +70,7 @@ CREATE TABLE `posts` (
 
 LOCK TABLES `posts` WRITE;
 /*!40000 ALTER TABLE `posts` DISABLE KEYS */;
-INSERT INTO `posts` VALUES (1,2,'pluzito-650x424-1.jpg','Hola amigos!','2018-12-01 03:00:00'),(2,3,'bob.jpg','Un hombre soy...','2019-11-15 03:00:00'),(3,4,'gokussj.jpg','SSJ',NULL),(4,5,'locos.jpg','Cielos Rick',NULL),(5,6,'rick.jpg','Que miras',NULL),(60,19,'buenosaires.jpg','asd','2020-11-04 22:12:51'),(62,18,'parque.jpg','Foto del parque','2020-11-07 13:14:59');
+INSERT INTO `posts` VALUES (1,2,'pluzito-650x424-1.jpg','Hola amigos!','2018-12-01 03:00:00'),(2,3,'bob.jpg','Un hombre soy...','2019-11-15 03:00:00'),(3,4,'gokussj.jpg','SSJ',NULL),(4,5,'locos.jpg','Cielos Rick',NULL),(5,6,'rick.jpg','Que miras',NULL),(60,19,'buenosaires.jpg','asd','2020-11-04 22:12:51'),(63,18,'parque.jpg','Foto del parque','2020-11-08 17:25:14');
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -119,4 +119,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-07 11:12:51
+-- Dump completed on 2020-11-08 14:26:52

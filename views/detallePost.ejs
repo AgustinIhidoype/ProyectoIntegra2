@@ -49,8 +49,12 @@
                                 <% if (usuarioLogueado != undefined) { %>
                                     <% if (usuarioLogueado.id == detallePost.Usuario.id) { %>
                                         
-                                       - <a href="/detalle/editar/<%= detallePost.id %> "> Editar posteo </a> </h3>
-
+                                       - <a href="/detalle/editar/<%= detallePost.id %> "> Editar</a> - 
+                                       <form action="/home/borrarpost" method="POST">
+                                            <input type="hidden" name="idBorrar" value="<%= detallePost.id %> "> <button type="submit">Borrar</button>
+                                        </form>
+                                </h3>
+                                        
                                     <%  } %> 
                                 <% } %>
 
