@@ -1,4 +1,5 @@
 let db = require("../db/models/index");
+const { Sequelize } = require("../db/models/index");
 let op = db.Sequelize.Op;
 
 let homeController = {
@@ -29,9 +30,10 @@ let homeController = {
 
         db.Usuario.findAll(
             {
-                where: [
-                    {nombre_usuario: { [op.like]: '%' + loBuscado + '%'}}
-                ],
+                where:{[Sequelize.Op.or]: [
+                    {email: { [op.like]: '%' + loBuscado + '%'}},
+                    {nombre_usuario: { [op.like]: '%' + loBuscado + '%'}},
+                ]},
                 order: ['nombre_usuario']
             }
         )
