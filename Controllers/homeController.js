@@ -53,6 +53,26 @@ let homeController = {
             res.redirect ("/home")
         })
     },
+    buscarpost: function(req,res){
+        res.render("buscadorPosteo")
+    },
+    resultadosPost: function(req,res){
+        let posteoBuscado= req.query.buscadorPost
+        db.Post.findAll(
+            {
+                where: {
+                    texto: {[op.like] : "%" + posteoBuscado + "%" }
+                },
+                include: [
+                    {association: "Usuario"}
+                ]
+            }
+        )
+        .then(function(posteosBuscados)
+        {
+            res.render ("resultadosPosteo", {posteosBuscados: posteosBuscados})
+        })
+    }
 }
 
 module.exports = homeController
