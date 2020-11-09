@@ -43,8 +43,9 @@ let loginController = {
     },
     desloguear: function(req, res){
         req.session.usuarioLogueado = undefined;
-
-        res.redirect('/home')
+        res.clearCookie('idDelUsuarioLogueado');
+        
+        return res.redirect('/home')
     }
     
 }
