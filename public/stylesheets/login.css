@@ -9,7 +9,12 @@
 .form-group{
     text-align: center;
 }
-
+.recordar{
+    display: grid;
+    padding-right: 20%;
+    padding-left: 20%;
+    grid-template-columns: 1fr 8fr;
+}
 .button{
  text-align: center;
 }

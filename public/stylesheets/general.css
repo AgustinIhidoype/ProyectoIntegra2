@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 main{
-    margin-bottom: 40px;
+    min-height: calc(100vh - 95px);
 }
 body{
     background-color: lightsalmon;

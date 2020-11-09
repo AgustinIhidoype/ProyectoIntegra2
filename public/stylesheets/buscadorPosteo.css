@@ -1,9 +1,5 @@
-html,body{
-    height: 100%;
-}
 main{
-    margin-top: 10%;
-    margin-bottom: 10%;
+    padding-top: 10%;
 }
 h1{
     font-family: 'Ranchers', cursive;;

@@ -3,9 +3,9 @@ h1{
     font-family: 'Ranchers', cursive;;
     color: white;
 }
-.main{
+main{
     text-align: center;
-    margin-top: 3%;
+    padding-top: 2%;
 }
 ul{
     list-style-type: none;
