@@ -1,3 +1,9 @@
 ul{
     list-style-type: none;
 }
+
+.fotos{
+    border-radius: 10px;
+    width: 300px;
+    height: 360px; 
+}

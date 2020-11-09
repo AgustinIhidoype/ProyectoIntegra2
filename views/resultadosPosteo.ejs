@@ -44,7 +44,7 @@
          
         <ul>
             <% for( let i = 0; i < posteosBuscados.length; i++ ) { %>
-            <div class= "uk-card uk-card-hover uk-card-body uk-flex uk-flex-column uk-flex-middle uk-flex-center">
+            <div class= "resultados">
                 <a href="/detalle/post/ <%= posteosBuscados[i].id %>"><li>
                     <img class='fotos' src="/images/posts/<%= posteosBuscados[i].url_imagen %>" width= 300px alt="foto de post" class="foto-perfil">
                     <h4><%= posteosBuscados[i].texto %> </h4>
