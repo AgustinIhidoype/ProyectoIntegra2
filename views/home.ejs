@@ -73,6 +73,7 @@
                                 <p class="uk-width-5-6"><%= posteos[i].texto %> </p>
                                <% if (usuarioLogueado != undefined) { %>
                                 <% if (usuarioLogueado.id == posteos[i].id_usuario) { %>
+                                    <a href="/detalle/editar/<%= posteos[i].id%>"> Editar Post</a>
                                     <form action="/home/borrarpost" method="POST">
                                         <input type="hidden" name="idBorrar" value="<%= posteos[i].id %> ">
                                         <button type="sumbit">Eliminar Post</button>

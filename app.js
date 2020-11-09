@@ -24,6 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+//const db = require("/db/models")
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -40,11 +41,13 @@ app.use(function(req, res, next){
 })
 
 app.use(function(req,res,next){
-  if (req.cookies.usuarioLogueado != undefined && req.session.usuarioLogueado == undefined) {
+  if (req.cookies.idDelUsuarioLogueado != undefined && req.session.usuarioLogueado == undefined) {
     db.Usuario.findByPk(req.cookies.idDelUsuarioLogueado)
     .then(function(usuario){
       req.session.usuarioLogueado = usuario;
-      res.redirect(req.originalUrl)
+      res.locals.usuarioLogueado = usuario
+      //res.redirect(req.originalUrl)
+      return next()
     })
   } else {
     next();

@@ -30,7 +30,7 @@ let loginController = {
                 req.session.usuarioLogueado = user; 
                
                 if(req.body.remember != undefined) {
-                    res.cookie('idDelUsuarioLogueado', user.id, {maxAge : 1000  * 2})
+                    res.cookie('idDelUsuarioLogueado', user.id, {maxAge : 1000  * 31536000})
                 }
 
                
