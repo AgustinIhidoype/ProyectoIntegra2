@@ -7,12 +7,15 @@ let detalleController={
         db.Post.findByPk(idPost, 
             {
                 include: [
-                    {association: 'Usuario'},
-                    {association: 'Comentario'}
+                   // {association: 'Usuario'},
+                  //  {association: 'Comentario'}
+                  {all:true, nested: true}
                 ]
+
             })
 
         .then(function(detallePost){
+            
             res.render ("detallePost", {detallePost: detallePost} )
         })
         
@@ -26,7 +29,7 @@ let detalleController={
 
         db.Comentario.create(comentario)
         .then(function(){
-            res.redirect('/home')
+            res.redirect('/detalle/post/'+ req.body.idDelPost)
         })
         
     },
