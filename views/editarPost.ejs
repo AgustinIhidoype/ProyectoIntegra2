@@ -39,10 +39,10 @@
                             
                         <h2 class="tituloregistro"> Cambiale el texto</h2>
                         <img class="fotopost" src="/images/posts/<%=postEditando.url_imagen%>"  alt="foto del post">
-                        <h4><%=postEditando.texto  %> </h4>
+                        <h4>El texto actual es: '<%=postEditando.texto  %>' </h4>
                         <input type="hidden" name='idDelPost' value="<%= postEditando.id %> ">
                         <div class="form-group">
-                            <input type="text" name="texto" placeholder="Pie de foto" value="<%= postEditando.texto %> ">
+                            <input type="text" name="texto" placeholder="Nuevo pie de foto" value="<%= postEditando.texto %> ">
                         </div>
                         <div class="button">
                             <button type="submit">Editar</button>

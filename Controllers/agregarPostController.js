@@ -3,7 +3,9 @@ let db = require("../db/models/index")
 let agregarPostController={
     
     agregarPost: function(req,res){
-
+        if (req.session.usuarioLogueado == undefined) {
+            res.redirect('/home')
+        }
         res.render ("agregarPost", )
     },
     posteado: function(req,res){

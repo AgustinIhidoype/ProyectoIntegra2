@@ -2,6 +2,9 @@ const db = require("../db/models")
 let bcrypt = require('bcryptjs');
 let loginController = {
     login: function (req, res) {
+        if (req.session.usuarioLogueado != undefined) {
+            res.redirect('/home')
+        }
         res.render("login", )
     },
     logueado: function(req,res){
@@ -32,7 +35,6 @@ let loginController = {
                 if(req.body.remember != undefined) {
                     res.cookie('idDelUsuarioLogueado', user.id, {maxAge : 1000  * 31536000})
                 }
-
                
             }
             res.redirect("/home")
