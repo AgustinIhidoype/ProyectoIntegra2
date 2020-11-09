@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet');
-
 h1{
     font-family: 'Ranchers', cursive;;
     color: white;
 }
 .main{
     text-align: center;
+    margin-top: 3%;
 }
 ul{
     list-style-type: none;

@@ -3,6 +3,9 @@ let bcrypt = require('bcryptjs');
 
 let registracionController = {
     registracion: function(req,res){
+        if (req.session.usuarioLogueado != undefined) {
+            res.redirect('/home')
+        }
         res.render('registracion')
     },
     registrado: function(req,res){

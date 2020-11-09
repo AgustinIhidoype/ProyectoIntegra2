@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Ranchers&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet');
 
+html,body{
+    height: 100%;
+}
+main{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
 .tituloregistro{
     font-family: 'Ranchers', cursive;;
     color: white;
 }
+
 .asd{
     text-align: center;
 }
