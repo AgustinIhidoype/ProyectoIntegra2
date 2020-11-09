@@ -7,8 +7,7 @@ let homeController = {
         db.Post.findAll(
         {
             include: [
-                {association: "Usuario"},
-                {association: "Comentario"}
+                {all: true, nested: true}
             ],
             order: [
                 ['fecha_publicación', 'DESC']
