@@ -8,12 +8,11 @@
     <link rel="icon"
         href="https://w7.pngwing.com/pngs/624/811/png-transparent-computer-icons-facebook-social-media-f-logo-cross-brand.png"
         type="image/x-icon">
-
-    <link rel="stylesheet" href="/stylesheets/agregarPost.css">
+    <link rel="stylesheet" href="/stylesheets/editarPost.css">
     <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel="stylesheet" href="/stylesheets/general.css">
     <link rel="stylesheet" href="/stylesheets/footer.css">
-    <link rel="stylesheet" href="/stylesheets/editarPost.css">
+    
 
     <!-- UiKit -->
     <!-- <link rel="stylesheet" href="css/uikit.min.css">
@@ -37,9 +36,9 @@
             <div class="asd">
                 <form action="/detalle/editar/editado" method="POST"> 
                             
-                        <h2 class="tituloregistro"> Cambiale el texto</h2>
+                        <h2 class="cambiale"> Cambiale el texto</h2>
                         <img class="fotopost" src="/images/posts/<%=postEditando.url_imagen%>"  alt="foto del post">
-                        <h4>El texto actual es: '<%=postEditando.texto  %>' </h4>
+                        <h4 class="textoActual">El texto actual es: '<%=postEditando.texto  %>' </h4>
                         <input type="hidden" name='idDelPost' value="<%= postEditando.id %> ">
                         <div class="form-group">
                             <input type="text" name="texto" placeholder="Nuevo pie de foto" value="<%= postEditando.texto %> ">
