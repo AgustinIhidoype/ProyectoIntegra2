@@ -10,11 +10,10 @@
         type="image/x-icon">
         <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
-    <link rel="stylesheet" href="/stylesheets/home.css">
+    <link rel="stylesheet" href="/stylesheets/resultadosPosteo.css">
     <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel="stylesheet" href="/stylesheets/footer.css">
     <link rel="stylesheet" href="/stylesheets/general.css">
-    <link rel="stylesheet" href="/stylesheets/resultadosPosteo.css">
 
     <!-- UiKit -->
     <!-- <link rel="stylesheet" href="css/uikit.min.css">
@@ -37,12 +36,12 @@
         <%- include("headerDeslogueado") %> 
     <% } %> 
 
-
+        <main>
 
 
     <% if (posteosBuscados != 0) { %>
-         
-        <ul>
+         <h2>Resultados de la búsqueda:</h2>
+        <ul class="ulResultados">
             <% for( let i = 0; i < posteosBuscados.length; i++ ) { %>
             <div class= "resultados">
                 <a href="/detalle/post/ <%= posteosBuscados[i].id %>"><li>
@@ -62,7 +61,7 @@
 
 
 
-
+    </main>
 
 
 

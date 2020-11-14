@@ -80,8 +80,7 @@ section.detalle-container{
 .comentarioDeslogueado{
     font-size: 15px;
     color: black;
-    text-decoration: none;
-    margin-right: 4px !important;
+    font-weight: bolder;
 }
 .info-post.uk-flex.uk-flex-middle {
 height: 15%;
