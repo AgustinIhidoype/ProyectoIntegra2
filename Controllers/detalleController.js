@@ -68,7 +68,7 @@ let detalleController={
             })
 
         .then(function(){
-            res.redirect('home')
+            res.redirect('/home')
         })
     }
     
