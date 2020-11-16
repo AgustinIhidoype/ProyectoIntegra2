@@ -43,8 +43,8 @@
                     </article>
                     <article class="uk-width-1-3 uk-flex uk-flex-column comentarios-detalle">
                         <div class="info-post uk-flex uk-flex-middle"  >
-                            <img src="/images/<%= detallePost.Usuario.fotoPerfil %> " class="fotoPerfil" alt="Foto del usuario">
-                            <h3><%= detallePost.Usuario.nombre_usuario %>
+                            <a class="hiper" href="/detalle/usuario/<%= detallePost.Usuario.id %> "> <img src="/images/<%= detallePost.Usuario.fotoPerfil %> " class="fotoPerfil" alt="Foto del usuario"></a>
+                            <h3 ><%= detallePost.Usuario.nombre_usuario %>
 
                                 <% if (usuarioLogueado != undefined) { %>
                                     <% if (usuarioLogueado.id == detallePost.Usuario.id) { %>

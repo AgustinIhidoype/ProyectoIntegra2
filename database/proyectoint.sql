@@ -32,7 +32,7 @@ CREATE TABLE `comentarios` (
   KEY `id_post` (`id_post`),
   CONSTRAINT `id_post` FOREIGN KEY (`id_post`) REFERENCES `posts` (`id`) ON UPDATE NO ACTION,
   CONSTRAINT `id_usuario2` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=212 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=214 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `comentarios` (
 
 LOCK TABLES `comentarios` WRITE;
 /*!40000 ALTER TABLE `comentarios` DISABLE KEYS */;
-INSERT INTO `comentarios` VALUES (1,1,1,'Hola!'),(2,1,2,'Bien!'),(3,1,3,'Genial!'),(4,1,4,'Que bueno!'),(5,2,2,'Tremendo!'),(6,2,3,'Malisimo'),(7,2,4,'Que loco'),(8,2,5,'Aguante Chaca'),(9,3,2,'Alto dia'),(10,3,3,'Hace frio'),(11,3,4,'Que rico'),(12,3,5,'Donde es?'),(13,4,1,'Chau'),(14,4,2,'Cielo'),(15,4,3,'Carton lleno'),(16,4,5,'Julio'),(17,5,2,'Adrian'),(18,5,3,'Fermentar'),(19,5,1,'Golf'),(20,5,4,'Autos'),(203,60,18,'Alta ciudad'),(204,5,18,'e'),(210,5,18,'eeee'),(211,5,18,'holaaaaaa');
+INSERT INTO `comentarios` VALUES (1,1,1,'Hola!'),(2,1,2,'Bien!'),(3,1,3,'Genial!'),(4,1,4,'Que bueno!'),(5,2,2,'Tremendo!'),(6,2,3,'Malisimo'),(7,2,4,'Que loco'),(8,2,5,'Aguante Chaca'),(9,3,2,'Alto dia'),(10,3,3,'Hace frio'),(11,3,4,'Que rico'),(12,3,5,'Donde es?'),(13,4,1,'Chau'),(14,4,2,'Cielo'),(15,4,3,'Carton lleno'),(16,4,5,'Julio'),(17,5,2,'Adrian'),(18,5,3,'Fermentar'),(19,5,1,'Golf'),(20,5,4,'Autos'),(203,60,18,'Alta ciudad'),(204,5,18,'e'),(210,5,18,'eeee'),(211,5,18,'holaaaaaa'),(212,63,18,'Si, este parque está tremendo'),(213,63,18,'helou');
 /*!40000 ALTER TABLE `comentarios` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +61,7 @@ CREATE TABLE `posts` (
   PRIMARY KEY (`id`),
   KEY `id_usuario` (`id_usuario`),
   CONSTRAINT `id_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`) ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -93,7 +93,7 @@ CREATE TABLE `usuarios` (
   `fotoPerfil` varchar(250) NOT NULL DEFAULT 'sinfoto.jpg',
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,7 +102,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'BoJack','2015-05-23 00:00:00','bojack@gmail.com','paredes','1996-02-28 00:00:00',NULL,NULL,'fotoperfilbojack.jpg'),(2,'Pluzito','2019-12-04 00:00:00','pluzito@gmail.com','siluetas','1990-04-05 00:00:00',NULL,NULL,'lafotodepluzito.jpg'),(3,'Bob Esponja','2015-07-24 00:00:00','bob@gmail.com','esponjamojada','1978-07-06 00:00:00',NULL,NULL,'fotoperfilbobesponja.jpg'),(4,'Goku','2014-09-11 00:00:00','goku@gmail.com','fuego123','1823-11-13 00:00:00',NULL,NULL,'goku.jpg'),(5,'Morty','2015-02-27 00:00:00','morty@gmail.com','yugoslavia','1998-12-12 00:00:00',NULL,NULL,'morty.jpg'),(6,'Rick','2016-01-02 00:00:00','rick@gmail.com','palangana130','1995-01-01 00:00:00',NULL,NULL,'ricky.jpg'),(7,'Juan','2020-10-19 16:50:06','juan@gmail.com','juan','1990-05-05 00:00:00',NULL,NULL,'sinfoto.jpg'),(14,'aguslerej','2020-10-26 14:31:12','aguslerej@gmail.com','$2a$10$uzbx4gjOOSwBQPphSCP7YulfO8nxRWeBPpcbrG','2020-12-01 00:00:00',1,'verde','sinfoto.jpg'),(15,'asd','2020-10-26 14:32:22','asd@gmail.com','$2a$10$9OES7NVufBC7PsJonHTPEOyk6SJRpjOyXs7p1k','2019-11-30 00:00:00',2,'vietnam','sinfoto.jpg'),(16,'asd1','2020-10-26 15:37:20','asd1@gmail.com','$2a$10$VFtB4kDloHJ7i9.QN5mISOShqpCv7PRno3sA4G','2014-11-30 00:00:00',1,'asd','sinfoto.jpg'),(17,'agustin','2020-10-26 15:48:00','agustin@gmail.com','$2a$10$yJWi8Mqa/M3QtQmGyK7.tOb3X1eQsGVcpscJAaOwOCmxx6qWSrnBK','2013-10-31 00:00:00',1,'asd','sinfoto.jpg'),(18,'Juan Cruz','2020-10-26 16:09:55','juancruz@gmail.com','$2a$10$oh.7rozDnsHzGcoLh6eZxuQw39T9uIinoZyqCjIeb7UtvxDusCMOq','2111-04-24 00:00:00',1,'verde','sinfoto.jpg'),(19,'Lucas','2020-11-02 14:05:20','lucasgroszmann@yahoo.com.ar','$2a$10$BsqpXJqEcUUCVhPqfuZVwuLq87Q2KkkDOmaGeubcyrXaCR/Mjjs4.','1999-04-20 00:00:00',1,'azul','sinfoto.jpg'),(20,'pedro martinez','2020-11-08 17:50:01','lucasgroszmann@gmail.com','$2a$10$Rv.MZPazek5EsUVq9RExJ.P/RGxqodTih9.RB1I7qr2PRIuvh2kJ6','2000-04-20 00:00:00',1,'azul','sinfoto.jpg');
+INSERT INTO `usuarios` VALUES (1,'BoJack','2015-05-23 00:00:00','bojack@gmail.com','paredes','1996-02-28 00:00:00',NULL,NULL,'fotoperfilbojack.jpg'),(2,'Pluzito','2019-12-04 00:00:00','pluzito@gmail.com','siluetas','1990-04-05 00:00:00',NULL,NULL,'lafotodepluzito.jpg'),(3,'Bob Esponja','2015-07-24 00:00:00','bob@gmail.com','esponjamojada','1978-07-06 00:00:00',NULL,NULL,'fotoperfilbobesponja.jpg'),(4,'Goku','2014-09-11 00:00:00','goku@gmail.com','fuego123','1823-11-13 00:00:00',NULL,NULL,'goku.jpg'),(5,'Morty','2015-02-27 00:00:00','morty@gmail.com','yugoslavia','1998-12-12 00:00:00',NULL,NULL,'morty.jpg'),(6,'Rick','2016-01-02 00:00:00','rick@gmail.com','palangana130','1995-01-01 00:00:00',NULL,NULL,'ricky.jpg'),(7,'Juan','2020-10-19 16:50:06','juan@gmail.com','juan','1990-05-05 00:00:00',NULL,NULL,'sinfoto.jpg'),(14,'aguslerej','2020-10-26 14:31:12','aguslerej@gmail.com','$2a$10$uzbx4gjOOSwBQPphSCP7YulfO8nxRWeBPpcbrG','2020-12-01 00:00:00',1,'verde','sinfoto.jpg'),(15,'asd','2020-10-26 14:32:22','asd@gmail.com','$2a$10$9OES7NVufBC7PsJonHTPEOyk6SJRpjOyXs7p1k','2019-11-30 00:00:00',2,'vietnam','sinfoto.jpg'),(16,'asd1','2020-10-26 15:37:20','asd1@gmail.com','$2a$10$VFtB4kDloHJ7i9.QN5mISOShqpCv7PRno3sA4G','2014-11-30 00:00:00',1,'asd','sinfoto.jpg'),(17,'agustin','2020-10-26 15:48:00','agustin@gmail.com','$2a$10$yJWi8Mqa/M3QtQmGyK7.tOb3X1eQsGVcpscJAaOwOCmxx6qWSrnBK','2013-10-31 00:00:00',1,'asd','sinfoto.jpg'),(18,'Juan Cruz','2020-10-26 16:09:55','juancruz@gmail.com','$2a$10$oh.7rozDnsHzGcoLh6eZxuQw39T9uIinoZyqCjIeb7UtvxDusCMOq','2111-04-24 00:00:00',1,'verde','sinfoto.jpg'),(19,'Lucas','2020-11-02 14:05:20','lucasgroszmann@yahoo.com.ar','$2a$10$BsqpXJqEcUUCVhPqfuZVwuLq87Q2KkkDOmaGeubcyrXaCR/Mjjs4.','1999-04-20 00:00:00',1,'azul','sinfoto.jpg'),(20,'pedro martinez','2020-11-08 17:50:01','lucasgroszmann@gmail.com','$2a$10$Rv.MZPazek5EsUVq9RExJ.P/RGxqodTih9.RB1I7qr2PRIuvh2kJ6','2000-04-20 00:00:00',1,'azul','sinfoto.jpg'),(22,'crea3','2020-11-15 18:16:41','crea3@gmail.com','$2a$10$zyb//EYEe5oAwvfUrTyzGu/6KEe6l38OjKm47Qhm8e6supMpPMbuC','2002-06-28 00:00:00',3,'bowser','sinfoto.jpg'),(23,'once','2020-11-16 12:45:24','once@gmail.com','$2a$10$b7VfRxYbcRtEzIFfWYh6S.KqWSeKFFzEqnUIDrI7l1rcZSUy5l7ha','2003-09-27 00:00:00',2,'japon','sinfoto.jpg');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -115,4 +115,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-09  9:42:35
+-- Dump completed on 2020-11-16 10:22:14

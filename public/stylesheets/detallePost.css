@@ -84,6 +84,11 @@ section.detalle-container{
 }
 .info-post.uk-flex.uk-flex-middle {
 height: 15%;
+};
+
+.hiper{
+    text-decoration: none;
+    color: black;
 }
 
 

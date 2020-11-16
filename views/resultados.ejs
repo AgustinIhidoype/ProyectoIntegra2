@@ -42,11 +42,11 @@
         <ul>
             <% for( let i = 0; i < usuarios.length; i++ ) { %>
             
-                <a href="/detalle/usuario/ <%= usuarios[i].id %>"><li>
+                <li> <a href="/detalle/usuario/ <%= usuarios[i].id %>">
                     <img class='fotos' src="/images/<%= usuarios[i].fotoPerfil %>" width= 300px alt="foto de perfil" class="foto-perfil">
-                    Hacé click acá para entrar al perfil de <%= usuarios[i].nombre_usuario %> 
+                    Hacé click acá para entrar al perfil de <%= usuarios[i].nombre_usuario %>  </a>
                 </li>
-                </a>
+               
 
             <% } %>
         </ul>

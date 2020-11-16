@@ -32,7 +32,7 @@ let homeController = {
                 where:{[Sequelize.Op.or]: [
                     {email: { [op.like]: '%' + loBuscado + '%'}},
                     {nombre_usuario: { [op.like]: '%' + loBuscado + '%'}},
-                ]},
+                ]}, //me trae un array con los datos de los usuarios que tienen contienen lo que busqué en el mail o el usuario
                 order: ['nombre_usuario']
             }
         )
