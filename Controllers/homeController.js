@@ -62,6 +62,9 @@ let homeController = {
                 where: {
                     texto: {[op.like] : "%" + posteoBuscado + "%" }
                 },
+                order: [
+                    ['fecha_publicación', 'DESC']
+                ],
                 include: [
                     {association: "Usuario"}
                 ]
